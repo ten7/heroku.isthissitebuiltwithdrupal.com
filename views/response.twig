@@ -1,0 +1,9 @@
+{% extends "_base.twig" %}
+
+{% block head %}
+  <div class="fade-in">Is <a href="{{ url|escape }}">this site</a> built with <a href="http://drupal.org">Drupal?</a></div>
+{% endblock %}
+
+{% block content %}
+  <a id="{{ is_drupal == 'yes' ? 'likely' : 'unlikely' }}" class="answer">{{ is_drupal }}</a>
+{% endblock %}

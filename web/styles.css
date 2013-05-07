@@ -1,0 +1,156 @@
+body {
+	text-align: center;
+	font-size: 62.5%;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	}
+
+a {
+	padding: 2px 0;
+	color: #999;
+	text-decoration: none;
+	border-bottom: 3px solid #999;
+	}
+
+a:hover {
+	color: #0471b5;
+	border-color: #0471b5;
+	}
+
+#wrapper {
+	width: 600px;
+	height: 340px;
+	margin-top: 12em;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+#head {
+	margin: .2em 0;
+	color: #999;
+	font-size: 4em;
+	}
+
+input#url {
+	width: 480px;
+	margin: 40px 0 20px 0;
+	font-size: 4.6em;
+	color: #999;
+	}
+	
+input#url.focused {
+	color: #0471b5;
+	}
+
+#explain {
+	color: #0471b5;
+	font-size: 1.2em;
+	}
+	
+#likely {
+	display: block;
+	color: #0471b5;
+	font-size: 20em;
+	font-weight: bold;
+	border: none;
+	}
+	
+#unlikely {
+	display: block;
+	color: #000;
+	font-size: 13.2em;
+	font-weight: bold;
+	border: none;
+	}
+	
+#error {
+	display: block;
+	color: #f00;
+	font-size: 9.5em;
+	font-weight: bold;
+	border: none;
+	}
+	
+#likely:hover,
+#unlikely:hover,
+#error:hover {
+	background: #fefdd7;
+	}
+	
+/* about page */
+a.marklet {
+	display: block;
+	margin: 0 0 .5em 0;
+	background: #0471b5;
+	color: #fff;
+	font-size: 6em;
+	border: none;
+	}
+	
+p {
+	text-align: left;
+	font-size: 2em;
+	line-height: 1.4em;
+	color: #666;
+	}
+
+.description p {
+	font-size: 1.4em;
+	}
+
+.description a {
+	padding: 0;
+	font-weight: bold;
+	border-bottom-width: 2px;
+	}
+	
+#footer {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	color: #999;
+	font-size: 1.2em;
+	}
+	
+#footer a {
+	border: none;
+	color: #999;
+	font-weight: bold;
+	text-decoration: underline;
+	}
+	
+#footer a:hover {
+	color: #0471b5;
+	}
+
+/* Fade in text */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only
+  	 1 time */
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+  /* this makes sure that after animation is done we remain at the last keyframe
+     value (opacity: 1)*/
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+}
+
+.fade-in.fade-delay {
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;	
+}
