@@ -22,7 +22,14 @@ $app->get('/', function (Request $request) use ($app) {
     return $app->redirect($request->getBasePath() . '/' . $url);
   }
 
-  return $app['twig']->render('index.twig');
+  $variables = array(
+    'url' => '',
+    'is_drupal' => '',
+    'tests' => '',
+    'errors' => '',
+  );
+
+  return $app['twig']->render('index.twig', $variables);
 });
 
 // Provide a simple about resource.
