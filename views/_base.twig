@@ -27,16 +27,10 @@
 
   {% endblock %}
 
-  <div id="ask"{% if url %} style="display: none;"{% endif %}>
-    <form action="{{ app.request.getBaseURL() }}" method="get" accept-charset="utf-8">
-      <input type="text" name="url" value="http://" id="url"/>
-    </form>
-    <div id="explain" style="display: none;">press enter to find out</div>
-  </div>
 
 </div>
 
-<div id="footer" class="fade-in fade-delay"><a href="about.html">tell me more</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://dreamformula.com/articles/drupal">dreamformula.com</a></div>
+<div id="footer" class="fade-in fade-delay"><a href="{{ app.request.getBaseURL() }}/about">tell me more</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://dreamformula.com/articles/drupal">dreamformula.com</a></div>
 
 <!-- Google Analytics -->
 <script type="text/javascript">

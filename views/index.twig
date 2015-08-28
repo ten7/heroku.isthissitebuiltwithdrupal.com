@@ -1,1 +1,10 @@
 {% extends "_base.twig" %}
+
+{% block content %}
+  <div id="ask"{% if url %} style="display: none;"{% endif %}>
+    <form action="{{ app.request.getBaseURL() }}" method="get" accept-charset="utf-8">
+      <input type="text" name="url" value="http://" id="url"/>
+    </form>
+    <div id="explain" style="display: none;">press enter to find out</div>
+  </div>
+{% endblock %}

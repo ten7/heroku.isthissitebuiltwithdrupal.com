@@ -34,7 +34,14 @@ $app->get('/', function (Request $request) use ($app) {
 
 // Provide a simple about resource.
 $app->get('/about', function() use ($app) {
-  return $app['twig']->render('about.twig');
+  $variables = array(
+    'url' => NULL,
+    'is_drupal' => '',
+    'tests' => '',
+    'errors' => '',
+  );
+
+  return $app['twig']->render('about.twig', $variables) ;
 });
 
 // Match any path after / including things with extra slashes in them such as
