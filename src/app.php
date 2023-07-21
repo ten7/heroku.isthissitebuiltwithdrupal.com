@@ -50,11 +50,23 @@ $app->get('/{url}', function(Request $request, $url) use ($app) {
   $guzzle = $app['guzzle.client'];
   $drupalCheck = new Dreamformula\DrupalCheck($url, $guzzle);
 
+  if ($drupalCheck->isDrupal()) {
+    $isd = 'yes';
+  } else {
+    $isd = 'no';
+  }
+
+  if (isset($drupalCheck->errors)) }
+    $der = $drupalCheck->errors;
+  } else {
+    $der = 0;
+  }
+  
   $variables = array(
     'url' => $url,
-    'is_drupal' => $drupalCheck->isDrupal() ? 'yes' : 'no',
+    'is_drupal' => $isd,
     'tests' => $drupalCheck->results,
-    'errors' => isset($drupalCheck->errors) ? $drupalCheck->errors : 0,
+    'errors' => $der,
   );
 
   // Return JSON for anyone that wants it.
