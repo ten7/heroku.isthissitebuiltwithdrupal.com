@@ -56,7 +56,7 @@ $app->get('/{url}', function(Request $request, $url) use ($app) {
     $isd = 'no';
   }
 
-  if (isset($drupalCheck->errors)) }
+  if (isset($drupalCheck->errors)) {
     $der = $drupalCheck->errors;
   } else {
     $der = 0;
